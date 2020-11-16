@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+  LogEvent.cs
+  Author: Straight Coder<simpleisrobust@gmail.com>
+  Date: Nov 13, 2020
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
