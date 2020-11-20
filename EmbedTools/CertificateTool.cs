@@ -178,6 +178,17 @@ namespace EmbedTools
 
         private void buttonBrowse_Click(object sender, EventArgs e)
         {
+            using (var dlg = new FolderBrowserDialog())
+            {
+                DialogResult result = dlg.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(dlg.SelectedPath))
+                {
+                    //string[] files = Directory.GetFiles(dlg.SelectedPath);
+
+                    //System.Windows.Forms.MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
+                }
+            }
         }
     }
 }

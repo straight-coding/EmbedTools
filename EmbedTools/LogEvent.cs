@@ -13,6 +13,7 @@ namespace EmbedTools
 {
     public class LogEventArgs : EventArgs
     {
+        public String Type { get; set; }
         public DateTime Timestamp { get; set; }
         public String Message { get; set; }
     }

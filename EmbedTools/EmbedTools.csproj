@@ -73,6 +73,12 @@
     <Compile Include="UdpLogReceiver.Designer.cs">
       <DependentUpon>UdpLogReceiver.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebPageConverter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebPageConverter.Designer.cs">
+      <DependentUpon>WebPageConverter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CertificateTool.resx">
       <DependentUpon>CertificateTool.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="UdpLogReceiver.resx">
       <DependentUpon>UdpLogReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebPageConverter.resx">
+      <DependentUpon>WebPageConverter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

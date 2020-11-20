@@ -32,11 +32,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLog = new System.Windows.Forms.TabPage();
             this.tabPageCertificate = new System.Windows.Forms.TabPage();
+            this.tabPageWebPacker = new System.Windows.Forms.TabPage();
             this.udpLogReceiver1 = new UdpLogReceiver();
             this.certificateTool1 = new CertificateTool();
+            this.webPageConverter1 = new WebPageConverter();
             this.tabControl1.SuspendLayout();
             this.tabPageLog.SuspendLayout();
             this.tabPageCertificate.SuspendLayout();
+            this.tabPageWebPacker.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -46,6 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPageLog);
             this.tabControl1.Controls.Add(this.tabPageCertificate);
+            this.tabControl1.Controls.Add(this.tabPageWebPacker);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -90,6 +94,24 @@
             this.certificateTool1.Size = new System.Drawing.Size(746, 501);
             this.certificateTool1.TabIndex = 0;
             // 
+            // tabPageWebPacker
+            // 
+            this.tabPageWebPacker.Controls.Add(this.webPageConverter1);
+            this.tabPageWebPacker.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWebPacker.Name = "tabPageWebPacker";
+            this.tabPageWebPacker.Size = new System.Drawing.Size(752, 507);
+            this.tabPageWebPacker.TabIndex = 2;
+            this.tabPageWebPacker.Text = "Web Page Compressor";
+            this.tabPageWebPacker.UseVisualStyleBackColor = true;
+            // 
+            // webPageConverter1
+            // 
+            this.webPageConverter1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webPageConverter1.Location = new System.Drawing.Point(0, 0);
+            this.webPageConverter1.Name = "webPageConverter1";
+            this.webPageConverter1.Size = new System.Drawing.Size(752, 507);
+            this.webPageConverter1.TabIndex = 0;
+            // 
             // EmbedTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -103,6 +125,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageLog.ResumeLayout(false);
             this.tabPageCertificate.ResumeLayout(false);
+            this.tabPageWebPacker.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -114,6 +137,8 @@
         private System.Windows.Forms.TabPage tabPageCertificate;
         private UdpLogReceiver udpLogReceiver1;
         private CertificateTool certificateTool1;
+        private System.Windows.Forms.TabPage tabPageWebPacker;
+        private WebPageConverter webPageConverter1;
     }
 }
 
