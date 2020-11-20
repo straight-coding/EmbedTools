@@ -108,7 +108,7 @@ namespace EmbedTools
             List<String> gzipExts = exts.ToList();
             List<String> files = new List<string>();
             foreach (string path in aryFiles)
-                files.Add(path);
+                files.Add(path.Replace("\\", "/"));
             files.Sort(CompareTwoPath);
 
             Dictionary<string, string> gzipFiles = new Dictionary<string, string>();
@@ -155,6 +155,7 @@ namespace EmbedTools
                             args.Timestamp = DateTime.Now;
                 InvokeLogEvent(this, args);
             }
+            nTotalSize += (UInt32)nHeaderSize; //additional zero herader
 
             int nOffset = 0;
             byte[] fsData = new byte[nTotalSize];
