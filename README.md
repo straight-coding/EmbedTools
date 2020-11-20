@@ -1,8 +1,8 @@
 # EmbedTools
 
-* Receive debug log broadcasted by device (via.UDP).
-* Simply generate RSA self-signed certificates using BouncyCastle package, and convert to a c source file.
-* Compress and pack web pages, then convert to a c source file.
+* Receive debug log broadcasted by device (via.UDP, 在8899端口侦听设备广播出来的日志).
+* Simply generate RSA self-signed certificates using BouncyCastle package, and convert to a c source file `lwip_cert.c`. (产生 PEM 格式的自签服务器证书)
+* Compress and pack web pages, then convert to a c source file `fs_data.c`. (gzip压缩网页，并转换成c源文件)
 
 # UDP Log Receiver
 
