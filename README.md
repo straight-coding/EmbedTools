@@ -1,7 +1,8 @@
 # EmbedTools
 
 * Receive debug log broadcasted by device (via.UDP).
-* Simply generate RSA self-signed certificates using BouncyCastle package.
+* Simply generate RSA self-signed certificates using BouncyCastle package, and convert to a c source file.
+* Compress and pack web pages, then convert to a c source file.
 
 # UDP Log Receiver
 
