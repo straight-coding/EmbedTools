@@ -277,7 +277,7 @@ namespace EmbedTools
                 _udpThread.Interrupt();
 
                 DateTime tStart = DateTime.Now;
-                while (_finished <= 0)
+                while (Interlocked.Equals(_finished, 0))
                 {
                     try
                     {
@@ -313,24 +313,24 @@ namespace EmbedTools
             if (String.IsNullOrEmpty(port))
                 return;
 
-            if (this._running == 0)
+            if (Interlocked.Equals(this._running, 0))
             {
                 if (Start())
                 {
-                    this._running = 1;
+                    Interlocked.Exchange(ref this._running, 1);
                     this.buttonRestart.Text = "Stop";
                     this.listBoxLog.Items.Add(String.Format("Started listening @ {0}", this.textBoxPort.Text));
                 }
             }
-            else if (this._running == 1)
+            else if (Interlocked.Equals(this._running, 1))
             {
                 Stop();
 
-                this._running = 0;
+                Interlocked.Exchange(ref this._running, 0);
                 this.buttonRestart.Text = "Start";
                 this.listBoxLog.Items.Add(String.Format("Stopped listening @ {0}", this.textBoxPort.Text));
             }
-            this.textBoxPort.Enabled = (this._running == 0);
+            this.textBoxPort.Enabled = (Interlocked.Equals(this._running, 0));
         }
 
         private void buttonOpenFile_Click(object sender, EventArgs e)
