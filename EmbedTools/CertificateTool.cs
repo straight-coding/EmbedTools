@@ -52,7 +52,7 @@ namespace EmbedTools
             this.comboBoxKeySize.Items.Add("1024");
             this.comboBoxKeySize.Items.Add("2048");
             this.comboBoxKeySize.Items.Add("4096");
-            this.comboBoxKeySize.SelectedIndex = 0;
+            this.comboBoxKeySize.SelectedIndex = 3;
 
             this.comboBoxAlgorithm.Items.Add("SHA256WithRSA");
             this.comboBoxAlgorithm.Items.Add("SHA512WithRSA");
@@ -128,7 +128,7 @@ namespace EmbedTools
                 return;
             }
 
-            X509Certificate2 serverCert = CertificateAPI.IssueCertificate(512, "CN=Straight Server", caCert, new[] { "server", "straight" }, new[] { KeyPurposeID.IdKPServerAuth });
+            X509Certificate2 serverCert = CertificateAPI.IssueCertificate(Convert.ToInt32(_certProps["Key Size"]), "CN=Straight Server", caCert, new[] { "server", "straight" }, new[] { KeyPurposeID.IdKPServerAuth });
             
             if (_certWorker.CancellationPending)
             {

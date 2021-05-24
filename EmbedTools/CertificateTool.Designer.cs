@@ -212,7 +212,6 @@
             // comboBoxKeySize
             // 
             this.comboBoxKeySize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxKeySize.Enabled = false;
             this.comboBoxKeySize.FormattingEnabled = true;
             this.comboBoxKeySize.Location = new System.Drawing.Point(219, 102);
             this.comboBoxKeySize.Name = "comboBoxKeySize";
